@@ -43,7 +43,7 @@ Definitely make sure plink is being installed..
 * Pick the components you want to install (I recommend all of them).
 * Enable use Git and optional Unix tools from the Windows Command Prompt.
     * _The second option could be used as well, however you might need to do extra steps to make sure your PATH variable has everything you need._
-* *IMPORTANT* Pick Use (Tortoise)Plink and make sure the path is correct.
+* **IMPORTANT** Pick Use (Tortoise)Plink and make sure the path is correct.
 * Pick the checkout you want.
 * I recommend choosing MinTTY.
 * Enable the first two options (you can enable the third option but it is not necessary).
