@@ -6,7 +6,7 @@ addons:
     - curl
 deploy:
   provider: script
-  script: script.sh
+  script: sh script.sh
   skip_cleanup: true
   on:
     repo: aaomidi/Yubikey-Guide
