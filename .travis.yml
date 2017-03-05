@@ -6,6 +6,7 @@ addons:
     - curl
 
 deploy:
+  script: respondToGit.sh
   skip_cleanup: true
   on:
     repo: aaomidi/Yubikey-Guide
