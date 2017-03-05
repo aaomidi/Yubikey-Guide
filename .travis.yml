@@ -4,16 +4,12 @@ addons:
     packages:
     - gnupg2
     - curl
-
 deploy:
-  script: respondToGit.sh
+  provider: script
+  script: script.sh
   skip_cleanup: true
   on:
     repo: aaomidi/Yubikey-Guide
-  before-install:
-  - cd $TRAVIS_BUILD_DIR/
-  - gpg2 --import pub_key.asc
-  - gpg2 --list-keys |sed -n -E 's/^pub.*\/([0-9A-F]{8}).*$/\1/p' | xargs gpg2 --export-ssh-key > openssh
-  - cat openssh | nc termbin.com 9999 > url
+
 
 
