@@ -10,7 +10,7 @@ deploy:
   skip_cleanup: true
   on:
     repo: aaomidi/Yubikey-Guide
-  before_install:
+  before_script:
   - chmod +x $TRAVIS_BUILD_DIR/script.sh
   - cd $TRAVIS_BUILD_DIR
   - gpg2 --import pub_key.asc
