@@ -39,3 +39,4 @@ node_components/
 bower_components/
 node_modules/
 *.log
+!.travis.yml

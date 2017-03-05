@@ -55,7 +55,7 @@ I recommend you install all components. Especially GPA makes creating the settin
 
 ## Software Configuration
 
-### Environment Variables
+### Environment Variables <a href="win-environmentvariables">
 Open `Git Bash` that you installed earlier and do the following commands and check if they include the proper variables.
 
 ```
@@ -95,6 +95,21 @@ gpg-connect-agent.exe /bye
 ## Key Generation <a name="win-keygeneration">
 
 This is probably the most important part this guide. There are hundreds of guides out there that make you generate the private key on your host and then push it to your Yubikey. This is a terrible idea and effectively reduces your security by a large amount. Simply, do not do this.
+
+Make sure your [environment variables](#win-environmentvariables) are correct before you start.
+
+1. Ensure your Yubikey is recognized by gpg:
+
+    `gpg2 --card-status`
+    
+    If it isn't then make sure the drivers are being recognized for it.
+1. Run the following commands, we need to change the default passwords for your Yubikey:
+
+```
+gpg2 --card-edit
+
+```
+
 
 
  
