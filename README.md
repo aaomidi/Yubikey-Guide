@@ -3,11 +3,11 @@
 Table of Contents
 
 1. [Introduction](#introduction)
-2. [Windows](#windows)
+1. [Windows](#windows)
     1. [Required Software](#win-requiredsoftware)
-    2. [Key Generation](#win-keygeneration)
-    3. [Software Configuration](#win-softwareconfiguration)
-3. [Linux](#linux)
+    1. [Software Configuration](#win-softwareconfiguration)
+    1. [Key Generation](#win-keygeneration)
+1. [Linux](#linux)
 
 ## Introduction <a name="introduction">
 
@@ -29,8 +29,8 @@ This section of the guide is for windows users. Windows is one of the more compl
 ### Required Software <a name="win-requiredsoftware">
 
 1. [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
-1. [git for Windows]("https://git-scm.com/")
-1. [gpg4win]("https://www.gpg4win.org/")
+1. [git for Windows](https://git-scm.com/)
+1. [gpg4win](https://www.gpg4win.org/)
 
 
 #### PuTTY
@@ -52,4 +52,41 @@ Definitely make sure plink is being installed..
 #### gpg4win
 
 I recommend you install all components. Especially GPA makes creating the settings easier, however the guide will cover both the cases of it being installed and not being installed.
+
+## Software Configuration
+
+### GPA (GNU Privacy Assistant)
+
+If you installed the program:
+
+* Open GPA
+* Edit->Backend Preferences
+* GPG Agent Tab
+* Mark enable-putty-support
+* Apply and close
+
+If you have not installed the program
+
+* Open explorer
+* Go to `%appdata%\gnupg\`
+* Open `gpg-agent.conf` in a proper text editor (Seriously, don't use Windows' Notepad)
+* Put this line inside the file `enable-putty-support`
+* Save it
+
+Once you're done with one of the above, you need to restart the agent.
+
+Open cmd, cd to where you have installed gpg4win. For me this is at `C:\Program Files (x86)\GNU\GnuPG\`
+Run the following two commands:
+
+```
+gpg-connect-agent.exe killagent /bye
+gpg-connect-agent.exe /bye
+```
+
+## Key Generation <a name="win-keygeneration">
+
+This is probably the most important part this guide. There are hundreds of guides out there that make you generate the private key on your host and then push it to your Yubikey. This is a terrible idea and effectively reduces your security by a large amount. Simply, do not do this.
+
+
+ 
 
