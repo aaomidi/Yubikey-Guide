@@ -55,6 +55,16 @@ I recommend you install all components. Especially GPA makes creating the settin
 
 ## Software Configuration
 
+### Environment Variables
+Open `Git Bash` that you installed earlier and do the following commands and check if they include the proper variables.
+
+```
+echo $GIT_SSH # Make sure it points to where plink is installed.
+echo $PATH # Make sure it contains the path to putty, git, and gpung 
+```
+
+If it does not contains one of them, make sure you add them through windows' envrionment variable interface.
+
 ### GPA (GNU Privacy Assistant)
 
 If you installed the program:
@@ -75,7 +85,6 @@ If you have not installed the program
 
 Once you're done with one of the above, you need to restart the agent.
 
-Open cmd, cd to where you have installed gpg4win. For me this is at `C:\Program Files (x86)\GNU\GnuPG\`
 Run the following two commands:
 
 ```
