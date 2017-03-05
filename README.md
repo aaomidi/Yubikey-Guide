@@ -20,7 +20,7 @@ This guide will focus on GPG and SSH key generation and how to use them to:
 
 This guide will be split of into different sections based on which operating system you use. Please visit contributing.md to add support for other operating systems.
  
-If this guide was useful for you, please make sure to start it. It helps with the visibility of it on search engines.
+If this guide was useful for you, please make sure to star it. It helps with the visibility of it on search engines.
 
 ## Windows <a name="windows">
 
@@ -107,6 +107,10 @@ Make sure your [environment variables](#win-environmentvariables) are correct be
 
 ```
 gpg2 --card-edit
+admin
+passwd
+
+# Select change pin
 
 ```
 
